@@ -9,7 +9,6 @@
 // Візьми код нижче і встав після оголошення своєї функції для перевірки коректності її роботи.
 // У консоль будуть виведені результати її роботи.
 
-
 // На що буде звертати увагу ментор при перевірці:
 // Оголошена змінна getTotalBalanceByGender
 // Змінній getTotalBalanceByGender присвоєна стрілочна функція з параметрами (users, gender)
@@ -19,45 +18,48 @@
 // Якщо значення параметра gender — це рядок "female", функція повертає число 8863
 // Виклик функції з випадковими, але валідними аргументами повертає правильне значення
 
-
-const getTotalBalanceByGender = (users, gender) => {return users.filter(user => user.gender === gender).reduce((sum, bal) => sum += bal.balance ,0)};
+const getTotalBalanceByGender = (users, gender) => {
+  return users
+    .filter((user) => user.gender === gender)
+    .reduce((sum, bal) => (sum += bal.balance), 0);
+};
 
 const allUsers = [
-    {
+  {
     name: "Moore Hensley",
     gender: "male",
-    balance: 2811
+    balance: 2811,
   },
   {
     name: "Sharlene Bush",
     gender: "female",
-    balance: 3821
+    balance: 3821,
   },
   {
     name: "Ross Vazquez",
     gender: "male",
-    balance: 3793
+    balance: 3793,
   },
   {
     name: "Elma Head",
     gender: "female",
-    balance: 2278
+    balance: 2278,
   },
   {
     name: "Carey Barr",
     gender: "male",
-    balance: 3951
+    balance: 3951,
   },
   {
     name: "Blackburn Dotson",
     gender: "male",
-    balance: 1498
+    balance: 1498,
   },
   {
     name: "Sheree Anthony",
     gender: "female",
-    balance: 2764
-  }
+    balance: 2764,
+  },
 ];
 
 console.log(getTotalBalanceByGender(allUsers, "male")); // 12053
